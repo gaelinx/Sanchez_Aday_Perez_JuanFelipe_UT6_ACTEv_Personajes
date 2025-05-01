@@ -1,7 +1,7 @@
 package Modelos;
-import Interfaces.IMovilizable;
+import Interfaces.IVolador;
 
-public class Arquero extends CombateFisico implements IMovilizable{
+public class Arquero extends CombateFisico implements IVolador{
     int agilidad;
     int numFlechas;
     public Arquero(int id, String nombre, int nivel, int salud, int agilidad, int numFlechas) {
@@ -16,8 +16,8 @@ public class Arquero extends CombateFisico implements IMovilizable{
     }
 
     @Override
-    public void moverse(){
-        System.out.println(nombre + " se mueve.");
+    public void volar(){
+        System.out.println(nombre + " empieza a volar.");
     }
 
     public void dispararFlecha(){

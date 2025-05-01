@@ -30,7 +30,7 @@ public class Juego {
                 Arquero arquero = (Arquero) personaje;
                 arquero.fisico();
                 arquero.atacar();
-                arquero.moverse();
+                arquero.volar();
                 arquero.dispararFlecha();
                 arquero.reabastecerFlechas(); 
             }
