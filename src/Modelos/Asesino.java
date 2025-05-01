@@ -15,7 +15,7 @@ public class Asesino extends CombateFisico implements ICurar, IMovilizable {
 
     @Override
     public void descripcion(){
-        System.out.println(nombre+" es un asesino, estos renegados se ocultan en la sombra para cargar su sigilo, una vez ya sean invisibles para el rival pueden dar un potente ataque por la espalda que inflingira daño critico, si el enemigo los ataca perderan su sigilo actual");
+        System.out.println(nombre+" es un asesino, estos renegados se ocultan en la sombra para cargar su sigilo, una vez ya sean invisibles para el rival pueden dar un potente ataque por la espalda que inflingira daño critico, si el enemigo los ataca perderan su sigilo actual\n");
     }
 
     @Override

@@ -20,7 +20,7 @@ public class Guerrero extends CombateFisico implements IDefendible{
 
     @Override
     public void descripcion(){
-        System.out.println(nombre+" Es un guerrero, estas tropas valerosas cuentan con una fuerza que les permite tener un balance entre el daño y la defensa, tambien cuentan con un escudo que les protegera de un ataque a cambio de perderlo por el resto del combate");
+        System.out.println(nombre+" Es un guerrero, estas tropas valerosas cuentan con una fuerza que les permite tener un balance entre el daño y la defensa, tambien cuentan con un escudo que les protegera de un ataque a cambio de perderlo por el resto del combate\n");
     }
 
     public void cargarAtaque(){

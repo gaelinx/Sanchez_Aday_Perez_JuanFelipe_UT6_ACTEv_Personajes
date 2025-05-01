@@ -31,6 +31,7 @@ public class Juego {
                 arquero.fisico();
                 arquero.atacar();
                 arquero.volar();
+                arquero.moverse();
                 arquero.dispararFlecha();
                 arquero.reabastecerFlechas(); 
             } else if (personaje instanceof Asesino) {

@@ -11,7 +11,7 @@ public class Mago extends CombateMagico implements IMagico, ICurar{
 
     @Override
     public void descripcion(){
-        System.out.println(nombre+ " Es un mago, estos especialistas en las artes antiguas son capaces de crear hechizos poderoso a cambio de Mana, el Mana se regenera progresivamente");
+        System.out.println(nombre+ " Es un mago, estos especialistas en las artes antiguas son capaces de crear hechizos poderoso a cambio de Mana, el Mana se regenera progresivamente\n");
     }
 
     @Override
