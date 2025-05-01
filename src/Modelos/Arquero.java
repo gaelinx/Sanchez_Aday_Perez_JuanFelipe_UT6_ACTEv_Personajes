@@ -16,6 +16,11 @@ public class Arquero extends CombateFisico implements IVolador{
     }
 
     @Override
+    public void descripcion(){
+        System.out.println(nombre+" Es un arquero, los arqueros cuentan con la ventaja de la distancia y poder volar para ser inmunes a ciertos ataque, con el coste de que cuentan con municion limitada que tendran que recargar cada cierto tiempo");
+    }
+
+    @Override
     public void volar(){
         System.out.println(nombre + " empieza a volar.");
     }

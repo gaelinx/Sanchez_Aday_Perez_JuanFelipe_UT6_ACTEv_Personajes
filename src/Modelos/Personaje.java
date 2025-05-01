@@ -15,7 +15,7 @@ public abstract class Personaje {
         this.salud = salud;
     }
 
-    void descripcion(){
+    public void descripcion(){
         System.out.println(nombre+" es un Personaje");
     }
 

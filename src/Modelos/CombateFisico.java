@@ -1,6 +1,6 @@
 package Modelos;
 
-public class CombateFisico extends Personaje {
+public abstract class CombateFisico extends Personaje {
 
     CombateFisico(int id, String nombre, int nivel, int salud) {
         super(id, nombre, nivel, salud);
@@ -12,7 +12,7 @@ public class CombateFisico extends Personaje {
     }
 
     @Override
-    void atacar(){
+    public void atacar(){
         System.out.println(nombre+" Hace daño fisico");
     }
 

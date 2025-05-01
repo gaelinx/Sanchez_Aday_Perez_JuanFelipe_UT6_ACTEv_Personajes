@@ -33,6 +33,22 @@ public class Juego {
                 arquero.volar();
                 arquero.dispararFlecha();
                 arquero.reabastecerFlechas(); 
+            } else if (personaje instanceof Asesino) {
+                Asesino asesino = (Asesino) personaje;
+                asesino.atacar();
+                asesino.fisico();
+                asesino.moverse();
+                asesino.ocultar();
+                asesino.atacarPorlaEspalda();
+            } else if (personaje instanceof Hechicero) {
+                Hechicero hechicero = (Hechicero) personaje;
+                hechicero.magico();
+                hechicero.atacar();
+                hechicero.mana();
+                hechicero.defender();
+                hechicero.invocarEntidad();
+
+
             }
         }
     }
