@@ -1,10 +1,10 @@
 package Modelos;
 import Interfaces.IMagico;
 
-class Mago extends CombateMagico implements IMagico{
+public class Mago extends CombateMagico implements IMagico{
     int mana;
     int sabiduria;
-    Mago(int id, String nombre, int nivel, int salud, int mana, int sabiduria) {
+    public Mago(int id, String nombre, int nivel, int salud, int mana, int sabiduria) {
         super(id, nombre, nivel, salud);
         this.mana = mana;
         this.sabiduria = sabiduria;
@@ -21,7 +21,7 @@ class Mago extends CombateMagico implements IMagico{
         System.out.println(nombre + " lanza un hechizo.");
     }
 
-    void regenerarMana(){
+    public void regenerarMana(){
         System.out.println(nombre + " regenera maná.");
     }
 }

@@ -7,7 +7,7 @@ abstract class CombateFisico extends Personaje {
         
     }
 
-    void fisico(){
+    public void fisico(){
         System.out.println(nombre+" se prepara físicamente.");
     }
 
