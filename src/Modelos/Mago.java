@@ -2,11 +2,9 @@ package Modelos;
 import Interfaces.IMagico;
 
 public class Mago extends CombateMagico implements IMagico{
-    int mana;
     int sabiduria;
     public Mago(int id, String nombre, int nivel, int salud, int mana, int sabiduria) {
-        super(id, nombre, nivel, salud);
-        this.mana = mana;
+        super(id, nombre, nivel, salud, mana);
         this.sabiduria = sabiduria;
     }
     

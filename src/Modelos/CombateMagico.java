@@ -2,7 +2,8 @@ package Modelos;
 
 public class CombateMagico extends Personaje {
 
-    public CombateMagico(int id, String nombre, int nivel, int salud) {
+    int mana;
+    public CombateMagico(int id, String nombre, int nivel, int salud, int mana) {
         super(id, nombre, nivel, salud);
     }
 
@@ -16,6 +17,6 @@ public class CombateMagico extends Personaje {
 
     @Override
     public void atacar() {
-
+        System.out.println(nombre+" Hace daño magico");
     }
 }
