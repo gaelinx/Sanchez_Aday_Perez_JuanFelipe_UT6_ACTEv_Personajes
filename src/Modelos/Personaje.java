@@ -14,7 +14,7 @@ public abstract class Personaje {
     }
 
     void descripcion(){
-        System.out.println(nombre+"es un Personaje");
+        System.out.println(nombre+" es un Personaje");
     }
 
     abstract void atacar();
