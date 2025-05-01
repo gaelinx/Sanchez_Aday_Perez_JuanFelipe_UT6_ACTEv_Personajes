@@ -1,5 +1,7 @@
 package Modelos;
 
+import java.util.Objects;
+
 public abstract class Personaje {
     int id;
     String nombre;
@@ -34,6 +36,6 @@ public abstract class Personaje {
     //MIRAR ESTO Y HACER HASHCODE PARA EL ID Y QUE UN ID NO SE REPITA
     @Override
     public int hashCode(){
-        return nombre.hashCode();
+        return Objects.hash(id, nombre, nivel, salud);
     }
 }
