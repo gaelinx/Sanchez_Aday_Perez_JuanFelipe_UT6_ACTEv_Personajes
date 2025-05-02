@@ -9,11 +9,12 @@ public class Guerrero extends CombateFisico implements IDefendible{
     boolean defender = false;
     boolean cargar = false;
     boolean usado = false;
-    public Guerrero(int id, String nombre, int nivel, int salud, int fuerza, int armadura, boolean escudo) {
+    public Guerrero(int id, String nombre, int nivel, int salud, int fuerza, int armadura) {
         super(id, nombre, nivel, salud);
         this.fuerza = fuerza;
         this.armadura = armadura;
-        this.escudo = escudo;
+        this.escudo = false;
+        this.defender = false;
     }
     
     @Override
@@ -42,16 +43,15 @@ public class Guerrero extends CombateFisico implements IDefendible{
         defender=true;
     }
 
-    public void usarEscudo(){
-        if (usado==true) {
-            System.out.println(nombre + " ya ha usado su escudo, no puede usarlo de nuevo.");
-            return;
-            
+    public void usarEscudo() {
+        if (!this.usado) {
+            this.escudo = true;
+            this.usado = true;  
+            System.out.println(this.nombre + " ha activado su escudo.");
+        } else {
+            System.out.println(this.nombre + " ya ha usado su escudo y no puede usarlo de nuevo.");
         }
-        System.out.println(nombre + " usa su escudo. El siguiente ataque no le hará daño.");
-        escudo = true;
-        usado=true;
-    }   
+    }
 
     public boolean getDefender(){
         return defender;

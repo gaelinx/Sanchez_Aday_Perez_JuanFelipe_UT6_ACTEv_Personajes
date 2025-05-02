@@ -1,3 +1,4 @@
+//En esta clase trabajamos tanto Juan Felipe como Aday, hice el commit desde Aday porque trabajamos los dos en el mismo ordenador
 package Batalla;
 import java.util.Scanner;
 import Modelos.*;
@@ -43,7 +44,7 @@ public class Batalla {
                                     ((Guerrero) personaje2).setDefender(false);
                                     
                                 }
-                                if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
+                                else if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
                                     System.out.println(personaje2.getNombre() + " vuela, recibe la mitad del daño.");
                                     personaje2.setSalud(personaje2.getSalud() - 9);
                                     ((Arquero) personaje2).setVolar(false);
@@ -57,7 +58,7 @@ public class Batalla {
                                 personaje2.setSalud(personaje2.getSalud() - 18);
                             }
                                 ((Guerrero) personaje1).setCargar(false);
-                            }
+                            } else {
                             personaje1.atacar();
                             System.out.println(personaje1.getNombre() + " ataca a " + personaje2.getNombre() + ".");
                             if (personaje2 instanceof Guerrero&&((Guerrero) personaje2).getEscudo() == true) {
@@ -69,7 +70,7 @@ public class Batalla {
                                 ((Guerrero) personaje2).setDefender(false);
                                 
                             }
-                            if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
+                            else if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
                                 System.out.println(personaje2.getNombre() + " vuela, recibe la mitad del daño.");
                                 personaje2.setSalud(personaje2.getSalud() - 4);
                                 ((Arquero) personaje2).setVolar(false);
@@ -82,6 +83,7 @@ public class Batalla {
                             } else {
                             personaje2.setSalud(personaje2.getSalud() - 8);
                         }
+                    }
                            
                             break;
                     
@@ -101,7 +103,7 @@ public class Batalla {
                                         ((Guerrero) personaje2).setDefender(false);
                                         
                                     }
-                                    if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
+                                    else if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
                                         System.out.println(personaje2.getNombre() + " vuela, recibe la mitad del daño.");
                                         personaje2.setSalud(personaje2.getSalud() - 6);
                                         ((Arquero) personaje2).setVolar(false);
@@ -138,7 +140,7 @@ public class Batalla {
                                         ((Guerrero) personaje2).setDefender(false);
                                         
                                     }
-                                    if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
+                                    else if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
                                         System.out.println(personaje2.getNombre() + " vuela, recibe la mitad del daño.");
                                         personaje2.setSalud(personaje2.getSalud() - 6);
                                         ((Arquero) personaje2).setVolar(false);
@@ -175,7 +177,7 @@ public class Batalla {
                                     ((Guerrero) personaje2).setDefender(false);
                                     
                                 }
-                                if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
+                                else if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
                                     System.out.println(personaje2.getNombre() + " vuela, recibe la mitad del daño.");
                                     personaje2.setSalud(personaje2.getSalud() - 10);
                                     ((Arquero) personaje2).setVolar(false);
@@ -200,7 +202,7 @@ public class Batalla {
                                         ((Guerrero) personaje2).setDefender(false);
                                         
                                     }
-                                    if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
+                                    else if (personaje2 instanceof Arquero&&((Arquero) personaje2).getVolar() == true) {
                                         System.out.println(personaje2.getNombre() + " vuela, recibe la mitad del daño.");
                                         personaje2.setSalud(personaje2.getSalud() - 8);
                                         ((Arquero) personaje2).setVolar(false);
@@ -212,7 +214,7 @@ public class Batalla {
                                         
                                     }
                                     else {
-                                    personaje2.setSalud(personaje2.getSalud() - 17);
+                                    personaje2.setSalud(personaje2.getSalud() - 20);
                                     }
                                     ((Asesino) personaje1).setOculto(false);
                                     System.out.println(personaje1.getNombre()+" ya no está oculto.");
@@ -262,7 +264,7 @@ public class Batalla {
                                     ((Guerrero) personaje1).setDefender(false);
                                     
                                 }
-                                if (personaje1 instanceof Arquero &&((Arquero) personaje1).getVolar() == true) {
+                                else if (personaje1 instanceof Arquero &&((Arquero) personaje1).getVolar() == true) {
                                     System.out.println(personaje1.getNombre() + " vuela, recibe la mitad del daño.");
                                     personaje1.setSalud(personaje1.getSalud() - 9);
                                     ((Arquero) personaje1).setVolar(false);
@@ -278,7 +280,7 @@ public class Batalla {
                               
                                     ((Guerrero) personaje2).setCargar(false);
                                 
-                            }
+                            } else {
                             personaje2.atacar();
                             System.out.println(personaje2.getNombre() + " ataca a " + personaje1.getNombre() + ".");
                             if (personaje1 instanceof Guerrero&&((Guerrero) personaje1).getEscudo() == true) {
@@ -290,7 +292,7 @@ public class Batalla {
                                 ((Guerrero) personaje1).setDefender(false);
                                 
                             }
-                            if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
+                            else if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
                                 System.out.println(personaje1.getNombre() + " vuela, recibe la mitad del daño.");
                                 personaje1.setSalud(personaje1.getSalud() - 4);
                                 ((Arquero) personaje1).setVolar(false);
@@ -303,6 +305,7 @@ public class Batalla {
                             }else {
                             personaje1.setSalud(personaje1.getSalud() - 8);
                             }
+                        }
                             
                             break;
                     
@@ -322,7 +325,7 @@ public class Batalla {
                                         ((Guerrero) personaje1).setDefender(false);
                                         
                                     }
-                                    if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
+                                    else if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
                                         System.out.println(personaje1.getNombre() + " vuela, recibe la mitad del daño.");
                                         personaje1.setSalud(personaje1.getSalud() - 6);
                                         ((Arquero) personaje1).setVolar(false);
@@ -358,7 +361,7 @@ public class Batalla {
                                         ((Guerrero) personaje1).setDefender(false);
                                         
                                     }
-                                    if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
+                                    else if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
                                         System.out.println(personaje1.getNombre() + " vuela, recibe la mitad del daño.");
                                         personaje1.setSalud(personaje1.getSalud() - 6);
                                         ((Arquero) personaje1).setVolar(false);
@@ -395,7 +398,7 @@ public class Batalla {
                                     ((Guerrero) personaje1).setDefender(false);
                                     
                                 }
-                                if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
+                                else if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
                                     System.out.println(personaje1.getNombre() + " vuela, recibe la mitad del daño.");
                                     personaje1.setSalud(personaje1.getSalud() - 10);
                                     ((Arquero) personaje1).setVolar(false);
@@ -420,7 +423,7 @@ public class Batalla {
                                         ((Guerrero) personaje1).setDefender(false);
                                         
                                     }
-                                    if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
+                                    else if (personaje1 instanceof Arquero&&((Arquero) personaje1).getVolar() == true) {
                                         System.out.println(personaje1.getNombre() + " vuela, recibe la mitad del daño.");
                                         personaje1.setSalud(personaje1.getSalud() - 8);
                                         ((Arquero) personaje1).setVolar(false);
@@ -432,7 +435,7 @@ public class Batalla {
                                         
                                     }
                                     else {
-                                    personaje1.setSalud(personaje1.getSalud() - 17);
+                                    personaje1.setSalud(personaje1.getSalud() - 20);
                                     }
                                     ((Asesino) personaje2).setOculto(false);
                                     System.out.println(personaje2.getNombre()+" ya no está oculto.");

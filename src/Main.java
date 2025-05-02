@@ -8,7 +8,7 @@ public class Main {
         Juego juego = new Juego();
 
         // Crear personajes
-        Guerrero guerrero1 = new Guerrero(1, "Oswald", 10, 100,1,1,false);
+        Guerrero guerrero1 = new Guerrero(1, "Oswald", 10, 100,1,1);
         Mago mago1 = new Mago(2, "Lulu", 10, 100, 1,1);
         Asesino asesino1 = new Asesino(3, "Poronga", 10, 80, 10, 25);
         Hechicero hechicero1 = new Hechicero(3,"Tralilito", 15, 150, 90, 25);
@@ -16,10 +16,12 @@ public class Main {
 
 
         //prueba batalla
-        Guerrero guerreroBatalla = new Guerrero(20, "Fang Yuan", 10, 100,1,1,false);
+        Guerrero guerreroBatalla = new Guerrero(20, "Fang Yuan", 10, 100,1,1);
         Arquero arqueroBatalla = new Arquero(20, "Arquerito", 10,100,1);
+        Asesino asesinoBatalla = new Asesino(20, "Asesinito", 10, 100,1,1);
+        Hechicero hechiceroBatalla = new Hechicero(20, "Hechicero", 10, 100,1,1);
 
-        Batalla batalla = new Batalla(guerreroBatalla, arqueroBatalla);
+        Batalla batalla = new Batalla(asesinoBatalla, hechiceroBatalla);
         batalla.iniciarBatalla();
 
 /*
