@@ -469,7 +469,12 @@ public class Batalla {
             }
             turno++;
         }
+        if (personaje1.getSalud()<=0){
+            System.out.println(personaje2.getNombre()+" ha matado a "+personaje1.getNombre()+" y  a ganado la batalla!");
+        } else if (personaje2.getSalud()<=0){
+            System.out.println(personaje1.getNombre()+" ha matado a "+personaje2.getNombre()+" y ganado la batalla!");
 
+        }
 
     }
 
@@ -511,5 +516,6 @@ public class Batalla {
         System.out.println(personaje1.getNombre() + " - Salud: " + personaje1.getSalud());
         System.out.println(personaje2.getNombre() + " - Salud: " + personaje2.getSalud());
     }
+
 
 }

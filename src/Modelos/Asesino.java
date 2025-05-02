@@ -33,7 +33,7 @@ public class Asesino extends CombateFisico implements ICurar, IMovilizable {
             return;
         }
         System.out.println(nombre + " recupera un 25% de su salud total.");
-        int curacion = (int) (salud * 0.25);   
+        int curacion = (int) (saludOriginal * 0.25);
         salud += curacion;
     }
 
