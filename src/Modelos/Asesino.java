@@ -6,12 +6,14 @@ import Interfaces.IMovilizable;
 public class Asesino extends CombateFisico implements ICurar, IMovilizable {
     int sigilo;
     int critico;
+    boolean oculto = false;
 
     public Asesino(int id, String nombre, int nivel, int salud, int sigilo, int critico) {
         super(id, nombre, nivel, salud);
         this.sigilo = sigilo;
         this.critico = critico;
     }
+    int saludOriginal = salud;
 
     @Override
     public void descripcion(){
@@ -20,7 +22,14 @@ public class Asesino extends CombateFisico implements ICurar, IMovilizable {
 
     @Override
     public void curar() {
-        System.out.println(nombre + " recupera la mitad de la salud que le hizo a su enemigo");
+       
+        if (salud >= saludOriginal) {
+            System.out.println(nombre + " ya tiene su salud completa.");
+            return;
+        }
+        System.out.println(nombre + " recupera un 25% de su salud total.");
+        int curacion = (int) (salud * 0.25);   
+        salud += curacion;
     }
 
     @Override
@@ -30,9 +39,24 @@ public class Asesino extends CombateFisico implements ICurar, IMovilizable {
 
     public void ocultar (){
         System.out.println(nombre+" se oculta en los arbutos, su sigilo aumenta");
+        oculto = true;
     }
 
     public void atacarPorlaEspalda(){
-        System.out.println(nombre+" Ataco por la espalda! hace daño critico y su sigilo se reinicia");
+        if (oculto == false) {
+            System.out.println(nombre+" no puede atacar por la espalda, no esta oculto");
+            return;
+            
+        }
+        System.out.println(nombre+" Ataca por la espalda! hace daño critico y su sigilo se reinicia");
     }
+
+    public boolean getOculto(){
+        return oculto;
+    }
+
+    public void setOculto(boolean oculto){
+        this.oculto = oculto;
+    }
+
 }

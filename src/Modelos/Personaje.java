@@ -19,7 +19,19 @@ public abstract class Personaje {
         System.out.println(nombre+" es un Personaje");
     }
 
-    abstract void atacar();
+    public abstract void atacar();
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getSalud(){
+        return salud;
+    }
+
+    public void setSalud(int salud){
+        this.salud = salud;
+    }
 
     @Override
     public String toString() {
@@ -38,4 +50,5 @@ public abstract class Personaje {
     public int hashCode(){
         return Objects.hash(id, nombre, nivel, salud);
     }
+
 }

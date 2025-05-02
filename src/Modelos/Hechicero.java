@@ -4,6 +4,7 @@ import Interfaces.IDefendible;
 
 public class Hechicero extends CombateMagico implements IDefendible {
     int concentracion;
+    boolean defender = false;
 
     public Hechicero(int id, String nombre, int nivel, int salud, int mana, int concentracion) {
         super(id, nombre, nivel, salud, mana);
@@ -22,10 +23,19 @@ public class Hechicero extends CombateMagico implements IDefendible {
 
     @Override
     public void defender() {
-        System.out.println(nombre+" Se envuelve en Magia, se esta defendiendo");
+        System.out.println(nombre+" Se envuelve en Magia, se esta defendiendo, el siguiente ataque le hara la mitad del daño original.");
+        defender = true;
     }
 
     public void invocarEntidad(){
-        System.out.println(nombre+" Pide ayudar a fuerzas ancestrales, "+nombre+" invoco a una entidad");
+        System.out.println(nombre+" Pide ayudar a fuerzas ancestrales, "+nombre+" invoco a una entidad que inflige 20 puntos de daño al enemigo.");
+    }
+
+    public boolean getDefender(){
+        return defender;
+    }
+
+    public void setDefender(boolean defender){
+        this.defender = defender;
     }
 }
