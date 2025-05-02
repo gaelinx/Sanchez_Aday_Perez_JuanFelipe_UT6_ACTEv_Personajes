@@ -19,6 +19,11 @@ public class Asesino extends CombateFisico implements ICurar, IMovilizable {
     }
 
     @Override
+    public void arma(){
+        System.out.println(nombre+" Usa una Daga");
+    }
+
+    @Override
     public void curar() {
         System.out.println(nombre + " recupera la mitad de la salud que le hizo a su enemigo");
     }

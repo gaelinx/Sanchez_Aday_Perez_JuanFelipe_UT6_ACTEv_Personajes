@@ -3,8 +3,10 @@ package Modelos;
 public abstract class CombateMagico extends Personaje {
 
     int mana;
+
     public CombateMagico(int id, String nombre, int nivel, int salud, int mana) {
         super(id, nombre, nivel, salud);
+        this.mana = mana;
     }
 
     public void magico(){
@@ -15,7 +17,7 @@ public abstract class CombateMagico extends Personaje {
         System.out.println(nombre + " Cuenta con Maná");
     }
 
-
+    abstract void pocion();
 
     @Override
     public void atacar() {

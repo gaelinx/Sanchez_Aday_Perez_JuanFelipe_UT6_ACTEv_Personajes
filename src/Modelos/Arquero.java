@@ -22,6 +22,11 @@ public class Arquero extends CombateFisico implements IVolador, IMovilizable{
     }
 
     @Override
+    public void arma(){
+        System.out.println(nombre+" Usa un arco");
+    }
+
+    @Override
     public void volar(){
         System.out.println(nombre + " empieza a volar.");
     }

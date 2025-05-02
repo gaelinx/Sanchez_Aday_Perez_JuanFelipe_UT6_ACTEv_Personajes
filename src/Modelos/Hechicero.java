@@ -19,6 +19,10 @@ public class Hechicero extends CombateMagico implements IDefendible {
     public void descripcion(){
         System.out.println(nombre+" Es un Hechizero, los Hechizeros usan sus habilidades magicas para aumentar su resistencia y poder contactar con entes antiguos que llaman para el combate\n");
     }
+    @Override
+    public void pocion(){
+        System.out.println(nombre+" Usa una pocion de Clarividencia, su concentracion Aumenta!");
+    }
 
     @Override
     public void defender() {

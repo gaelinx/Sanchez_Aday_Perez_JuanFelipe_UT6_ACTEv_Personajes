@@ -21,6 +21,11 @@ public class Mago extends CombateMagico implements IMagico, ICurar{
     }
 
     @Override
+    public void pocion(){
+        System.out.println(nombre+" Usa una pocion de ignifuga, ahora hace un 10% mas de daño con hechizos de fuego!");
+    }
+
+    @Override
     public void curar() {
         System.out.println(nombre + " lanza un hechizo de curación.");
     }
