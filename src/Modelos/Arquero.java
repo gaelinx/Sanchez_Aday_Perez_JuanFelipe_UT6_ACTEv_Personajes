@@ -5,10 +5,12 @@ import Interfaces.IVolador;
 public class Arquero extends CombateFisico implements IVolador, IMovilizable{
     int agilidad;
     int numFlechas;
-    public Arquero(int id, String nombre, int nivel, int salud, int agilidad, int numFlechas) {
+    boolean volando = false;
+
+    public Arquero(int id, String nombre, int nivel, int salud, int agilidad) {
         super(id, nombre, nivel, salud);
         this.agilidad = agilidad;
-        this.numFlechas = numFlechas;
+        this.numFlechas = 10;
     }
 
     @Override
@@ -28,7 +30,8 @@ public class Arquero extends CombateFisico implements IVolador, IMovilizable{
 
     @Override
     public void volar(){
-        System.out.println(nombre + " empieza a volar.");
+        System.out.println(nombre + " empieza a volar. El siguiente ataque le hará la mitad de puntos de daño original.");
+        volando = true;
     }
 
     @Override
@@ -37,10 +40,34 @@ public class Arquero extends CombateFisico implements IVolador, IMovilizable{
     }
 
     public void dispararFlecha(){
-        System.out.println(nombre + " dispara una flecha.");
+        if (getFlechas() <= 0) {
+            System.out.println(nombre + " no tiene flechas para disparar.");
+            return;
+            
+        }
+        numFlechas--;
+        System.out.println(nombre + " dispara una flecha. Hace 12 de daño. Flechas restantes: " + (numFlechas));
     }
+
+
 
     public void reabastecerFlechas(){
         System.out.println(nombre + " reabastece flechas.");
-    }   
+        numFlechas = 10;
+    } 
+    
+    //getters y setters
+    public int getFlechas(){
+        return numFlechas;
+    }
+
+    public boolean getVolar(){
+        return volando;
+    }
+
+    public void setVolar(boolean volando){
+        this.volando = volando;
+    }
+
+
 }

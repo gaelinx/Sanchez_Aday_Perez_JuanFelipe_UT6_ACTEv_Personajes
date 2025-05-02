@@ -1,5 +1,6 @@
 import Juego.Juego;
 import Modelos.*;
+import Batalla.Batalla;
 import Interfaces.*;
 
 public class Main {
@@ -13,11 +14,22 @@ public class Main {
         Hechicero hechicero1 = new Hechicero(3,"Magnificus", 15, 150, 90, 25);
         Arquero arquero1 = new Arquero(4,"Ranok", 99, 70, 90, 25);
 
+        //prueba batalla
+        Guerrero guerreroBatalla = new Guerrero(20, "Fang Yuan", 10, 100,1,1);
+        Arquero arqueroBatalla = new Arquero(20, "Arquerito", 10,100,1);
+        Asesino asesinoBatalla = new Asesino(20, "Asesinito", 10, 100,1,1);
+        Hechicero hechiceroBatalla = new Hechicero(20, "Hechicero", 10, 100,1,1);
+
+        Batalla batalla = new Batalla(asesinoBatalla, hechiceroBatalla);
+        batalla.iniciarBatalla();
+
+/*
         juego.agregarPersonaje(mago1);
         juego.agregarPersonaje(guerrero1);
         juego.agregarPersonaje(asesino1);
         juego.agregarPersonaje(hechicero1);
         juego.agregarPersonaje(arquero1);
+        juego.mostrarAcciones();
 
         arquero1.descripcion();
         guerrero1.descripcion();

@@ -27,15 +27,36 @@ public class Mago extends CombateMagico implements IMagico, ICurar{
 
     @Override
     public void curar() {
-        System.out.println(nombre + " lanza un hechizo de curación.");
+        if (mana < 2) {
+            System.out.println(nombre + " no tiene suficiente maná para lanzar un hechizo de curación.");
+            return;
+            
+        }
+        int curacion = (int) (salud * 0.25);
+        System.out.println(nombre + " lanza un hechizo de curación, se cura "+curacion+"  puntos de vida totales. Usa 2 de Mana.");
+        mana -= 2;
+        
+        salud += curacion;
     }
 
     @Override
     public void lanzarHechizo(){
-        System.out.println(nombre + " lanza un hechizo.");
+        if (mana < 2) {
+            System.out.println(nombre + " no tiene suficiente maná para lanzar un hechizo.");
+            return;
+            
+        }
+        mana -= 2;
+        System.out.println(nombre + " lanza un hechizo usando 2 de Mana. Mana restante: " + getMana());
     }
 
     public void regenerarMana(){
         System.out.println(nombre + " regenera maná.");
+        mana += 10;
     }
+
+    public int getMana(){
+        return mana;
+    }
+
 }
